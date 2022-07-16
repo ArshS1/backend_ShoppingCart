@@ -43,6 +43,30 @@ Product addProduct()
     return Product(7, "TEST", 0);
 }
 
+bool userCheckout(Cart &cart)
+{
+    if (cart.isEmpty())
+    {
+        return false;
+    }
+
+    double total = cart.getCartTotal();
+
+    double paid;
+    std::cout << "Please pay: " << std::to_string(total).substr(0, 4) << std::endl;
+    std::cout << "Payment: ";
+    std::cin >> paid;
+    while (paid < total)
+    {
+        std::cout << "Balance remaining: " << std::to_string(total - paid).substr(0, 4);
+        std::cin >> paid;
+
+    }
+
+    std::cout << "Thanks for your payment, here's your change: " << std::to_string(paid - total).substr(0, 4); 
+    return true; 
+}
+
 int main()
 {
     char choice;
@@ -77,6 +101,7 @@ int main()
             else
             {
                 // Prompt user to checkout with Cash
+                userCheckout(cart);
                 break;
             }
         }
