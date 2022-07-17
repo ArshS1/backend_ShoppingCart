@@ -36,7 +36,7 @@ public:
 
 class Item
 {
-    const Product x;
+    Product x;
     int count = 0;
 
 public:

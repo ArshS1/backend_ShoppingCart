@@ -53,18 +53,30 @@ bool userCheckout(Cart &cart)
     double total = cart.getCartTotal();
 
     double paid;
-    std::cout << "Please pay: " << std::to_string(total).substr(0, 4) << std::endl;
+    std::cout << "Please pay: " << std::to_string(total).substr(0, 5) << std::endl;
     std::cout << "Payment: ";
     std::cin >> paid;
     while (paid < total)
     {
+        double temp;
         std::cout << "Balance remaining: " << std::to_string(total - paid).substr(0, 4);
-        std::cin >> paid;
+        std::cin >> temp;
 
+        paid += temp;
+
+        std::cout << "\n";
     }
 
-    std::cout << "Thanks for your payment, here's your change: " << std::to_string(paid - total).substr(0, 4); 
-    return true; 
+    if (paid - total == 0)
+    {
+        std::cout << "Thanks for your payment.\n";
+    }
+    else
+    {
+        std::cout << "Thanks for your payment, here's your change: " << std::to_string(paid - total).substr(0, 4);
+        std::cout << "\n";
+    }
+    return true;
 }
 
 int main()
