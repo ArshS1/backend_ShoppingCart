@@ -1,5 +1,6 @@
 The backend of a Shopping Cart which allows users to add items, view cart, and checkout. 
-This program uses C++ with OOPS concepts and runs on the CLI. The program is split into the main runner file and the header file to keep code clean and maintainable. 
+This program uses C++ with OOPS concepts and runs on the CLI. The program is split into the main runner file and the header file to keep code clean and maintainable. <br/>
+The program uses DSA structures like Hashmaps to get responses in faster time averaging O(1) time. 
 
 # Running locally
 Please compile with the following command on your local machine to ensure that the program runs as expected:
