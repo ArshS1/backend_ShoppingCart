@@ -5,6 +5,7 @@ The program uses DSA structures like Hashmaps to get responses in faster time av
 # Running locally
 Please compile with the following command on your local machine to ensure that the program runs as expected:
 ```
+git clone https://github.com/ArshS1/backend_ShoppingCart.git <Local name for repository>
 g++ --std=c++11 shoppingCart.cpp -o <executableName>
 ./<executableName>
 ```
